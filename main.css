@@ -8,69 +8,35 @@ body {
   width: 100%;
   background: transparent;
   max-width: 1080px;
-  margin-left: 10%;
+  margin-left: 8%;
+  margin-top: 20%;
 }
 
 .stopwatch {
+  font-family: sans-serif;
   text-align: center;
   font-size: 100px;
-  height: 300px;
+  height: 200px;
   width: 100%;
   background: transparent;
+  color: white;
+  text-shadow: 2px 2px 4px black;
 }
 
 h1 {
   margin-bottom: 0px
 }
 
-button {
-  height: 50px;
-  width: 200px;
-  border: none;
-  padding: none;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bolder;
-  color: white;
-  text-shadow: 2px 2px 4px black;
-  box-shadow: 5px 5px 5px rgb(48, 48, 48);
-}
-
-.caption {
-  font-size: 20px;
-  list-style: none;
-  padding-left: 0px;
-}
-
-.caption li {
+.progress-bar {
   display: inline-block;
-  width: 20%;
+  background-color: white;
+  box-shadow: 2px 2px 4px black;
+  text-align: center;
+  width: 100px;
+  max-width: 1080px;
+  height: 20px;
 }
 
-.start {
-  background-color: rgb(80, 236, 161);
-}
-
-.start:hover {
-  background-color: rgb(46, 142, 96);
-}
-
-.stop {
-  background-color: rgb(214, 72, 72);
-}
-
-.stop:hover {
-  background-color: rgb(142, 46, 46);
-}
-
-.clear {
-  background-color: rgb(181, 176, 173);
-}
-
-.clear:hover {
-  background-color: rgb(70, 68, 67);
-}
 
 .hours::after,
 .minutes::after {
@@ -91,9 +57,6 @@ button {
   .container {
     margin-left: 0px;
   }
-  .caption li {
-    width: 13%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -102,22 +65,9 @@ button {
   }
 }
 
-@media (max-width: 414px) {
-  .caption {
-    font-size: 18px;
-    margin-left: -5%;
-  }
-  .caption li {
-    width: 24%;
-  }
-}
 
 @media (max-width: 375px) {
   .stopwatch {
     font-size: 36px;
-  }
-
-  button {
-    margin-top: 15px;
   }
 }

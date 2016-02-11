@@ -4,11 +4,9 @@
   <head>
     <meta name="name" charset="utf-8" content="content">
     <link rel="stylesheet" href="main.css">
-    <title>TIY Stopwatch</title>
+    <title>TIY Color Clock</title>
   </head>
-
-  <body>
-
+  <body class="gradient">
     <header>
     </header>
     <section class="container">
@@ -19,40 +17,14 @@
           <span class="minutes">00</span>
           <span>:</span>
           <span class="seconds">00</span>
-          <span>:</span>
-          <span class="milliseconds">00</span>
         </h1>
-        <ul class="caption">
-          <li>Hours</li>
-          <li>Minutes</li>
-          <li>Seconds</li>
-          <li>Milliseconds</li>
-        </ul>
-        <section class="controls">
-            <button class="start">Start</button>
-            <button class="stop">Stop</button>
-            <button class="clear">Clear</button>
-        </section>
+        <div class="progress-bar"></div>
       </section>
 
     </section>
     <footer>
     </footer>
-  <script>
-    'use strict';
 
-    var emptyValue;
-    emptyValue = 10;
-    console.log(emptyValue);
-
-    var myString = "a";
-    var sports = ["baseball", "soccer"];
-    console.log(sports);
-    console.log(sports.length);
-    sports.push("swimming", "track", "football");
-    console.log(sports);
-    console.log(sports.length);
-  </script>
   <script type="text/javascript" src="main.js"></script>
   </body>
 
