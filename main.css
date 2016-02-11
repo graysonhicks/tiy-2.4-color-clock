@@ -1,0 +1,123 @@
+body {
+  height: 700px;
+  background: radial-gradient(circle at 50% 300px, #5a5c5c, #cfc8c8);
+}
+
+.container {
+  height: 300px;
+  width: 100%;
+  background: transparent;
+  max-width: 1080px;
+  margin-left: 10%;
+}
+
+.stopwatch {
+  text-align: center;
+  font-size: 100px;
+  height: 300px;
+  width: 100%;
+  background: transparent;
+}
+
+h1 {
+  margin-bottom: 0px
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  padding: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 5px 5px 5px rgb(48, 48, 48);
+}
+
+.caption {
+  font-size: 20px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.caption li {
+  display: inline-block;
+  width: 20%;
+}
+
+.start {
+  background-color: rgb(80, 236, 161);
+}
+
+.start:hover {
+  background-color: rgb(46, 142, 96);
+}
+
+.stop {
+  background-color: rgb(214, 72, 72);
+}
+
+.stop:hover {
+  background-color: rgb(142, 46, 46);
+}
+
+.clear {
+  background-color: rgb(181, 176, 173);
+}
+
+.clear:hover {
+  background-color: rgb(70, 68, 67);
+}
+
+.hours::after,
+.minutes::after {
+  content: ""
+}
+
+
+@media (min-width: 1920px) {
+  .container {
+    margin-left: 23%;
+  }
+}
+
+@media (max-width: 800px) {
+  .stopwatch {
+    font-size: 48px;
+  }
+  .container {
+    margin-left: 0px;
+  }
+  .caption li {
+    width: 13%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 45%;
+  }
+}
+
+@media (max-width: 414px) {
+  .caption {
+    font-size: 18px;
+    margin-left: -5%;
+  }
+  .caption li {
+    width: 24%;
+  }
+}
+
+@media (max-width: 375px) {
+  .stopwatch {
+    font-size: 36px;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+}
