@@ -1,25 +1,19 @@
 'use strict';
 //use setTime??? and setInterval?
-
-// Time Variables
-var hours = document.querySelector(".hours");
-var minutes = document.querySelector(".minutes");
-var seconds = document.querySelector(".seconds");
-
 // Functions
-
-  //START BUTTON
       function clockCounter(evt){
 
         setInterval(timer, 1000);
 
         function timer(){
           var currentDate = new Date();
-         // write times to html
-          seconds.textContent = ("0" + currentDate.getSeconds()).slice(-2); //gets lowest interval
-          minutes.textContent = ("0" + currentDate.getMinutes()).slice(-2);// divide by proper time
-          hours.textContent = (currentDate.getHours() % 12);//increment since counter
-          console.log("check");                                                                    // runs every 1ms
+          var hours = document.querySelector(".hours");
+          var minutes = document.querySelector(".minutes");
+          var seconds = document.querySelector(".seconds");
+          seconds.textContent = ("0" + currentDate.getSeconds()).slice(-2);
+          minutes.textContent = ("0" + currentDate.getMinutes()).slice(-2);
+          hours.textContent = (currentDate.getHours() % 12);
+          console.log("check");
         }
 
         setInterval(colorAndProgressMaker, 1000);
@@ -43,8 +37,26 @@ var seconds = document.querySelector(".seconds");
           htmlBody.style.background = "radial-gradient(circle at 50% 300px, #5a5c5c, "+backgroundHex+")";
           var progressBar = document.querySelector('.progress-bar');
           progressBar.style.width = secondsPercent + "%";
+          //grab h1
+          var hexHeading = document.querySelector(".elapsed-time");
+
+          hexHeading.addEventListener("mouseover", function(){
+            hexHeading.textContent = backgroundHex;
+          });
+
+
+          hexHeading.addEventListener("mouseleave", function (){
+            hexHeading.innerHTML = "<span class='hours'>00</span><span>:</span><span class='minutes'>00</span><span>:</span><span class='seconds'>00</span>";
+
+            var currentDate = new Date();
+            var hours = document.querySelector(".hours");
+            var minutes = document.querySelector(".minutes");
+            var seconds = document.querySelector(".seconds");
+            seconds.innerHTML = ("0" + currentDate.getSeconds()).slice(-2);
+            minutes.textContent = ("0" + currentDate.getMinutes()).slice(-2);
+            hours.textContent = (currentDate.getHours() % 12);
+          });
         }
       }
         // ON START CLICK
-
       clockCounter();
