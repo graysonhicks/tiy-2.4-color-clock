@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 700px;
   background: radial-gradient(circle at 50% 300px, #5a5c5c, #cfc8c8);
@@ -7,9 +11,13 @@ body {
   height: 300px;
   width: 100%;
   background: transparent;
-  max-width: 1080px;
-  margin-left: 8%;
+  max-width: 980px;
+  margin-left: 14%;
   margin-top: 20%;
+}
+
+.elapsed-time {
+  text-align: center;
 }
 
 .stopwatch {
@@ -35,6 +43,8 @@ h1 {
   width: 100px;
   max-width: 1080px;
   height: 20px;
+  position: relative;
+  right: 35px
 }
 
 
@@ -44,30 +54,112 @@ h1 {
 }
 
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   .container {
-    margin-left: 23%;
+    margin-left: 5%;
   }
-}
-
-@media (max-width: 800px) {
-  .stopwatch {
-    font-size: 48px;
-  }
-  .container {
-    margin-left: 0px;
+  body {
+    height: 540px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    margin-top: 45%;
+    max-width: 768px;
+    margin-left: 0px;
+    padding-top: 100px;
+  }
+  .progress-bar {
+    right: 0px;
+  }
+  body {
+    height: 865px;
+    background: radial-gradient(circle at 50% 50%, #5a5c5c, #cfc8c8);
+  }
+}
+
+@media (max-width: 736px) {
+  .stopwatch {
+    font-size: 48px;
+  }
+
+  .container {
+    margin-left: 0px;
+    margin-top: 100px;
+    padding-top: 0px
+  }
+
+  .container h1 {
+    padding-top: 50px;
+  }
+
+  body {
+    height: 307px;
+    background: radial-gradient(circle at 50% 10%, #5a5c5c, #cfc8c8);
+    background-position: center;
+  }
+
+  .progress-bar {
+    right: 0px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 667px) {
+  .container {
+    margin-top: 60px;
   }
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 568px) {
   .stopwatch {
     font-size: 36px;
   }
+  .container {
+    margin-top: 0px;
+    padding-top: 40px;
+  }
+  h1.elapsed-time {
+    margin-top: 0px;
+  }
+  body {
+    height: 304px;
+  }
+}
+
+@media (max-width: 414px) {
+    body {
+      height: 700px;
+    }
+    h1.elapsed-time {
+      padding-top: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+      height: 650px;
+    }
+    h1.elapsed-time {
+      padding-top: 200px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+      height: 550px;
+    }
+    h1.elapsed-time {
+      padding-top: 175px;
+    }
+}
+
+@media (max-width: 320px) and (max-height: 480px){
+    body {
+      height: 462px;
+    }
+    h1.elapsed-time {
+      padding-top: 125px;
+    }
 }

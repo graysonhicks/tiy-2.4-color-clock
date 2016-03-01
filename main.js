@@ -1,8 +1,8 @@
-'use strict';
+
 //use setTime??? and setInterval?
 // Functions
       function clockCounter(evt){
-
+        'use strict';
         setInterval(timer, 1000);
 
         function timer(){
@@ -34,7 +34,7 @@
           //concatenate hex values with hash in front
           var backgroundHex = "#" + hoursString + minutesString + secondsString;
           //insert hex value to background-gradient
-          htmlBody.style.background = "radial-gradient(circle at 50% 300px, #5a5c5c, "+backgroundHex+")";
+          htmlBody.style.background = "radial-gradient(circle at 50% 300px, #5a5c5c, " + backgroundHex + ")";
           var progressBar = document.querySelector('.progress-bar');
           progressBar.style.width = secondsPercent + "%";
           //grab h1
@@ -58,5 +58,5 @@
           });
         }
       }
-        // ON START CLICK
+        // ON START
       clockCounter();
